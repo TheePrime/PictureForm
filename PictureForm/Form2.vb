@@ -1,6 +1,22 @@
 ﻿Public Class Form2
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        PictureBox1.Image = Image.FromFile("C:\Users\areri\source\repos\PictureForm\PictureForm\image.jpeg")
+        Dim openFileDialog As New OpenFileDialog()
+
+
+        openFileDialog.Title = "Select a File"
+        openFileDialog.Filter = "All Files|*.*"
+        openFileDialog.Multiselect = False
+
+
+        If openFileDialog.ShowDialog() = DialogResult.OK Then
+
+            Dim selectedFilePath As String = openFileDialog.FileName
+
+            MessageBox.Show("Selected file: " & selectedFilePath)
+
+            PictureBox1.Image = Image.FromFile(selectedFilePath)
+
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

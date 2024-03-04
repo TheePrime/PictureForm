@@ -10,5 +10,15 @@
 
     End Sub
 
+    Private Sub Form1_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+
+        If Me.WindowState = FormWindowState.Maximized Then
+
+            Me.BackColor = Color.Red
+        Else
+
+            Me.BackColor = SystemColors.Control
+        End If
+    End Sub
 End Class
 

@@ -35,7 +35,7 @@ Partial Class Form1
         Button1.Name = "Button1"
         Button1.Size = New Size(135, 50)
         Button1.TabIndex = 0
-        Button1.Text = "Load object Demo"
+        Button1.Text = " Load object demo"
         Button1.UseVisualStyleBackColor = False
         ' 
         ' Button2
